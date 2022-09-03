@@ -1,0 +1,112 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Clouds Hub", "Midnight")
+    -- MAIN
+    local Main = Window:NewTab("Main")
+    local MainSection = Main:NewSection("Main")
+
+
+    MainSection:NewButton("Infinite Yield", "FE Admin Commands", function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
+    end)
+   
+   MainSection:NewButton("Owl Hub", "Universal FPS GUI", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+   end)
+
+MainSection:NewButton("Dark Dex V4", "Universal FPS GUI", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/CloudsHub-lol/Dark-Dex-String/main/Dark%20Dex%20v4"))();    
+   end)
+
+
+    --LOCAL PLAYER
+    local Player = Window:NewTab("Player")
+    local PlayerSection = Player:NewSection("Player")
+
+    PlayerSection:NewSlider("Walkspeed", "SPEED!!", 500, 16, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+    end)
+
+    PlayerSection:NewSlider("Jumppower", "JUMP HIGH!!", 350, 50, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+    end)
+
+    PlayerSection:NewButton("Reset WS/JP", "Resets to all defaults", function()
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end)
+    
+    PlayerSection:NewToggle("Super-Human", "go fast and jump high", function(state)
+        if state then
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 120
+            game.Players.LocalPlayer.Character.Humanoid.JumpPower = 120
+        else
+            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+            game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+        end
+    end)
+
+
+    --Trolling
+    local Trolling = Window:NewTab("Trolling")
+    local TrollingSection = Trolling:NewSection("Trolling")
+
+    TrollingSection:NewButton("Chat Spoofer", "Lets you chat for other people", function()
+        loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()
+    end)
+    
+    TrollingSection:NewButton("UTG V3", "Trolling GUI I think", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Blukez/Scripts/main/UTG%20V3%20RAW"))()
+    end)
+    
+    TrollingSection:NewButton("Back/Front Flip [Z]", "Makes you do gymnastics", function()
+        loadstring(game:HttpGet('https://pastebin.com/raw/7wDcPtLk'))()
+    end)
+    
+    
+    --Crim
+    local Crim = Window:NewTab("Criminality")
+    local CrimSection = Crim:NewSection("Criminality")
+    
+    CrimSection:NewButton("Femware", "lol wat", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/JackHiggly/RobloxThings/main/FemWare0", true))()
+    end)
+    
+    
+    --Decaying Winter
+    local DecayingWinter = Window:NewTab("Decaying Winter")
+    local DecayingWinterSection = DecayingWinter:NewSection("OP Commands (F9 for commands)")
+    
+    DecayingWinterSection:NewButton("Op Commands [GoodWill]", "woah", function()
+        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Aidez/decaying_winter/main/GOODWILL_COMMAND_SCRIPT'),true))()
+    end)
+    
+    
+    --Combat Warriors
+    local CombatWarriors = Window:NewTab("Combat Warriors")
+    local CombatWarriorsSection = CombatWarriors:NewSection("Combat Warriors")
+    
+    CombatWarriorsSection:NewButton("Project Hook [Free]", "no skill", function()
+        loadstring(game:HttpGet("https://projecthook.xyz/scripts/free.lua"))()
+    end)
+    
+    
+    --YBA
+    local YBA = Window:NewTab("YBA")
+    local YBASection = YBA:NewSection("YBA")
+    
+    YBASection:NewButton("Bitch Boy v1", "Bitch", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/zakater5/LuaRepo/main/YBA/MainGui.lua"))()
+    end)
+    
+    YBASection:NewButton("YBA Sucks Ass", "Ass", function()
+        
+    end)
+    
+    --Other GUIs
+    local OtherGUIs = Window:NewTab("Other GUIs")
+    local OtherGUIsSection = OtherGUIs:NewSection("GUIs")
+    
+    OtherGUIsSection:NewButton("simplity", "traitor", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/HeyGyt/simplity1/main/main"))()
+    end)
+    
