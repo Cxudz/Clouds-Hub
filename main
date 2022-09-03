@@ -93,6 +93,10 @@ MainSection:NewButton("Dark Dex V4", "Universal FPS GUI", function()
         loadstring(game:HttpGet("https://projecthook.xyz/scripts/free.lua"))()
     end)
     
+    CombatWarriorsSection:NewButton("Cheese", "super no skill", function()
+        loadstring(game:HttpGet("https://cheeseskid.tk/shit/combat_warriors.lua",true))()
+    end)
+    
     
     --YBA
     local YBA = Window:NewTab("YBA")
