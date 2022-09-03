@@ -16,6 +16,10 @@ local Window = Library.CreateLib("Clouds Hub", "DarkTheme")
 MainSection:NewButton("Dark Dex V4", "Universal FPS GUI", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/CloudsHub-lol/Dark-Dex-String/main/Dark%20Dex%20v4"))();    
    end)
+   
+   MainSection:NewButton("Remote Spy [F9]", "See remote events", function()
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/PhoenixAceVFX/Roblox-Scripts/master/Remote%20Spy.lua"))();    
+   end)
 
 
     --LOCAL PLAYER
@@ -96,10 +100,6 @@ MainSection:NewButton("Dark Dex V4", "Universal FPS GUI", function()
     
     YBASection:NewButton("Bitch Boy v1", "Bitch", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/zakater5/LuaRepo/main/YBA/MainGui.lua"))()
-    end)
-    
-    YBASection:NewButton("YBA Sucks Ass", "Ass", function()
-        
     end)
     
     --Other GUIs
