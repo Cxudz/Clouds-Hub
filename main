@@ -102,6 +102,18 @@ MainSection:NewButton("Dark Dex V4", "Universal FPS GUI", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/zakater5/LuaRepo/main/YBA/MainGui.lua"))()
     end)
     
+    --Slap Battles
+     local Slap = Window:NewTab("Slap Battles")
+    local SlapSection = Slap:NewSection("Slap Battles")
+    
+    SlapSection:NewButton("Dizzy Hub", "Yeah", function()
+        loadstring(game:HttpGet(("https://raw.githubusercontent.com/dizyhvh/rbx_scripts/main/dizzy_hub/loader.lua")))();
+    end)
+
+	SlapSection:NewButton("Slap Trolling", "We do a little trolling", function()
+        loadstring(game:HttpGet("https://pastebinp.com/raw/ErFMc7GV", true))()
+    end)
+    
     --Other GUIs
     local OtherGUIs = Window:NewTab("Other GUIs")
     local OtherGUIsSection = OtherGUIs:NewSection("GUIs")
