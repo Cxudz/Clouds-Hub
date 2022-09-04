@@ -52,11 +52,17 @@ MainSection:NewButton("Dark Dex V4", "Universal FPS GUI", function()
 
     --Trolling
     local Trolling = Window:NewTab("Trolling")
-    local TrollingSection = Trolling:NewSection("Trolling")
+    local TrollingSection = Trolling:NewSection("Chat Stuff")
 
     TrollingSection:NewButton("Chat Spoofer", "Lets you chat for other people", function()
         loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()
     end)
+    
+    TrollingSection:NewButton("Chat Bypasser", "Bypass Roblox's chat filter", function()
+        loadstring(game:HttpGet("https://raw.githubusercontent.com/Cxudz/Clouds-Hub/main/Kais%20Chat%20Bypass"))()
+    end)
+    
+    local TrollingSection = Trolling:NewSection("Animations")
     
     TrollingSection:NewButton("UTG V3", "Trolling GUI I think", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Blukez/Scripts/main/UTG%20V3%20RAW"))()
