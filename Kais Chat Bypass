@@ -1,0 +1,102 @@
+--[[
+   Chat bypass script made by Kaid#0001 !!!!!!!!
+   Working: 3/12/22
+]]--
+
+--Credit to mothra for the idea of pre text (:
+
+if _G.firstRan6436936344 == true then
+   return
+end
+_G.firstRan6436936344 = true
+
+math.randomseed(tick())
+local UI = game:GetObjects("rbxassetid://9075566119")[1]
+local tws = game:GetService("TweenService")
+
+if syn and syn.protect_gui then
+   syn.protect_gui(UI)
+   for i,v in pairs(UI:GetDescendants()) do
+       syn.protect_gui(v)
+   end
+end
+
+for i,v in pairs(UI:GetDescendants()) do
+   if v:IsA("UIGradient") then
+       v.Offset = Vector2.new(-.5,-.5)
+       local twig = TweenInfo.new(4,Enum.EasingStyle.Quad,Enum.EasingDirection.InOut,-1,true,.2)
+       local tweeng = tws:Create(v,twig,{["Offset"]=Vector2.new(.5,.5)})
+       tweeng:Play()
+   end
+end
+
+local main = UI.Outline.Main
+
+--Drag script by Tiffblox
+local a=game:GetService("UserInputService")local b=UI.Outline;local c;local d;local e;local f;local function g(h)local i=h.Position-e;b.Position=UDim2.new(f.X.Scale,f.X.Offset+i.X,f.Y.Scale,f.Y.Offset+i.Y)end;b.InputBegan:Connect(function(h)if h.UserInputType==Enum.UserInputType.MouseButton1 or h.UserInputType==Enum.UserInputType.Touch then c=true;e=h.Position;f=b.Position;h.Changed:Connect(function()if h.UserInputState==Enum.UserInputState.End then c=false end end)end end)b.InputChanged:Connect(function(h)if h.UserInputType==Enum.UserInputType.MouseMovement or h.UserInputType==Enum.UserInputType.Touch then d=h end end)a.InputChanged:Connect(function(h)if h==d and c then g(h)end end)
+
+main.AdvancedHide.BypassText.PlaceholderText = "fuck"
+main.AdvancedShow.AdvancedTextbox.PlaceholderText = [[Welcome to Advanced Mode!!!\nExample Of Usage: I'm gonna "fuck" you so "fucking" hard]]
+
+--Stuff that only needs to be done once lol
+local ChatMain = require(game:GetService("Players").LocalPlayer.PlayerScripts.ChatScript.ChatMain)
+local function bypass()
+   ChatMain.MessagePosted:fire("dffhdfshfd"..math.random(100000,1000000))
+   ChatMain.MessagesChanged:fire(math.random(100000,1000000))
+end
+
+--Chat button pressed
+main.Chat.MouseButton1Down:Connect(function()
+   bypass()
+   if main.AdvancedHide.PreText.Text ~= "" then
+       game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(main.AdvancedHide.PreText.Text, "All")
+   end
+   bypass()
+   if main.AdvancedHide.BypassText.Text ~= "" then
+       for v in main.AdvancedHide.BypassText.Text:gmatch"." do
+           if v ~= " " then
+               if main.AdvancedHide.PreText.Text ~= "" then
+                   wait(#main.AdvancedHide.BypassText.Text * .15 + .15)
+               else
+                   wait(#main.AdvancedHide.BypassText.Text * .15)
+               end
+               game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(v, "All")
+               if main.AdvancedHide.PreText.Text ~= "" then
+                   wait(#main.AdvancedHide.BypassText.Text * .15 + .15)
+               else
+                   wait(#main.AdvancedHide.BypassText.Text * .15)
+               end
+               bypass()
+           end
+       end
+   end
+   if main.AdvancedHide.PostText.Text ~= "" then
+       wait(1)
+       game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(main.AdvancedHide.PostText.Text, "All")
+   end
+end)
+
+local mini = false
+--Minimize button meow!
+main.Minimize.MouseButton1Down:Connect(function()
+   if not mini then
+       --Minimize
+       main.Chat.Visible = false
+       for i,v in pairs(main.AdvancedHide:GetChildren()) do v.Visible = false end
+       UI.Outline.Size = UDim2.new(0, 445,0, 30)
+       main.Minimize.Size = UDim2.new(0.1, 0,1, 0)
+       main.Credit.Size = UDim2.new(1, 0,1, 0)
+       mini = true
+   else
+       --Un-Minimize
+       main.Chat.Visible = true
+       for i,v in pairs(main.AdvancedHide:GetChildren()) do v.Visible = true end
+       UI.Outline.Size = UDim2.new(0, 445,0, 272)
+       main.Minimize.Size = UDim2.new(0.1, 0,0.2, 0)
+       main.Credit.Size = UDim2.new(1, 0,0.2, 0)
+       mini = false
+   end
+end)
+
+UI.Name = math.random(10000000,99999999)
+UI.Parent = game:GetService("CoreGui")
