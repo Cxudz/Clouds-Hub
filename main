@@ -21,9 +21,6 @@ MainSection:NewButton("Dark Dex V4", "Universal FPS GUI", function()
     loadstring(game:HttpGet("https://raw.githubusercontent.com/PhoenixAceVFX/Roblox-Scripts/master/Remote%20Spy.lua"))();    
    end)
 
-MainSection:NewButton("simplity", "traitor", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/HeyGyt/simplity1/main/main"))()
-    end)
 
     --LOCAL PLAYER
     local Player = Window:NewTab("Player")
@@ -130,9 +127,6 @@ MainSection:NewButton("simplity", "traitor", function()
     local PrisonSection = Prison:NewSection("Prison Life")
     
     PrisonSection:NewButton("Gun Spawner & Modder", "Spawn and Moddify Items", function()
-    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Iumentis/PublicScripts/main/PL"))()
-    
-    --Other GUIs
-    local OtherGUIs = Window:NewTab("Other GUIs")
-    local OtherGUIsSection = OtherGUIs:NewSection("GUIs")
+       loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Iumentis/PublicScripts/main/PL"))()
+
 end)
