@@ -1,4 +1,4 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Cxudz/Clouds-Hub/main/source.lua"))()
 local Window = Library.CreateLib("Clouds Hub", "DarkTheme")
     -- MAIN
     local Main = Window:NewTab("Main")
@@ -52,7 +52,7 @@ MainSection:NewButton("Dark Dex V4", "Universal FPS GUI", function()
 
     --Trolling
     local Trolling = Window:NewTab("Trolling")
-    local TrollingSection = Trolling:NewSection("Chat Stuff")
+    local TrollingSection = Trolling:NewSection("Stuff")
 
     TrollingSection:NewButton("Chat Spoofer", "Lets you chat for other people", function()
         loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()
@@ -61,8 +61,6 @@ MainSection:NewButton("Dark Dex V4", "Universal FPS GUI", function()
     TrollingSection:NewButton("Chat Bypasser", "Bypass Roblox's chat filter", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Cxudz/Clouds-Hub/main/Kais%20Chat%20Bypass"))()
     end)
-    
-    local TrollingSection = Trolling:NewSection("Animations")
     
     TrollingSection:NewButton("UTG V3", "Trolling GUI I think", function()
         loadstring(game:HttpGet("https://raw.githubusercontent.com/Blukez/Scripts/main/UTG%20V3%20RAW"))()
@@ -113,7 +111,7 @@ MainSection:NewButton("Dark Dex V4", "Universal FPS GUI", function()
     end)
     
     --Slap Battles
-     local Slap = Window:NewTab("Slap Battles")
+    local Slap = Window:NewTab("Slap Battles")
     local SlapSection = Slap:NewSection("Slap Battles")
     
     SlapSection:NewButton("Dizzy Hub", "Yeah", function()
@@ -123,6 +121,13 @@ MainSection:NewButton("Dark Dex V4", "Universal FPS GUI", function()
 	SlapSection:NewButton("Slap Trolling", "We do a little trolling", function()
         loadstring(game:HttpGet("https://pastebinp.com/raw/ErFMc7GV", true))()
     end)
+    
+    --Prison Life
+    local Prison = Window:NewTab("Prison Life")
+    local PrisonSection = Prison:NewSection("Prison Life")
+    
+    PrisonSection:NewButton("Gun Spawner & Modder", "Spawn and Moddify Items", function()
+    loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Iumentis/PublicScripts/main/PL"))()
     
     --Other GUIs
     local OtherGUIs = Window:NewTab("Other GUIs")
