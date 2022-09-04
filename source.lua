@@ -115,9 +115,9 @@ local themeStyles = {
     Serpent = {
         SchemeColor = Color3.fromRGB(0, 0, 0),
         Background = Color3.fromRGB(0, 0, 0),
-        Header = Color3.fromRGB(37, 38, 38),
+        Header = Color3.fromRGB(0, 0, 0),
         TextColor = Color3.fromRGB(92, 4, 199),
-        ElementColor = Color3.fromRGB(0, 0, 0)
+        ElementColor = Color3.fromRGB(92, 4, 199)
     }
 }
 local oldTheme = ""
