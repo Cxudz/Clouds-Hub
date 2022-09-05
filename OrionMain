@@ -116,8 +116,8 @@ end
 -- Slap Battles
 if game.PlaceId == 6403373529 then
         OrionLib:MakeNotification({
-        Name = "Found Game Combat Warriors",
-        Content = "Loaded Tab specifically for Combat Warriors",
+        Name = "Found Game Slap Battles",
+        Content = "Loaded Tab specifically for Slap Battles",
         Image = false,
         Time = 5
     })
