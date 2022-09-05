@@ -113,7 +113,52 @@ if game.PlaceId == 4282985734 then
 end   
 
 
+-- Slap Battles
+if game.PlaceId == 6403373529 then
+        OrionLib:MakeNotification({
+        Name = "Found Game Combat Warriors",
+        Content = "Loaded Tab specifically for Combat Warriors",
+        Image = false,
+        Time = 5
+    })
+    local SlapBattlesTab = Window:MakeTab({
+        Name = "Slap Battles",
+        PremiumOnly = false
+    })
+    SlapBattlesTab:AddButton({
+        Name = "Dizzy Hub",
+        Callback = function()
+                  print("Dizzy Hub button pressed")
+                  loadstring(game:HttpGet(("https://raw.githubusercontent.com/dizyhvh/rbx_scripts/main/dizzy_hub/loader.lua")))();
+                  OrionLib:MakeNotification({
+                    Name = "Success!",
+                    Content = "Dizzy Hub has successfully been executed",
+                    Time = 5
+                })
+          end    
+    })
+    SlapBattlesTab:AddButton({
+        Name = "Slap Trolling",
+        Callback = function()
+                  print("Slap Trolling button pressed")
+                  loadstring(game:HttpGet("https://pastebinp.com/raw/ErFMc7GV", true))()
+                  OrionLib:MakeNotification({
+                    Name = "Success!",
+                    Content = "Slap Trolling has successfully been executed",
+                    Time = 5
+                })
+          end    
+    })
 
+
+
+
+
+
+
+
+
+end
 
 
 
