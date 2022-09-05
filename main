@@ -1,132 +1,191 @@
-local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/Cxudz/Clouds-Hub/main/source.lua"))()
-local Window = Library.CreateLib("Clouds Hub", "DarkTheme")
-    -- MAIN
-    local Main = Window:NewTab("Main")
-    local MainSection = Main:NewSection("Main")
+--Clouds Test
+local OrionLib = loadstring(game:HttpGet(('https://raw.githubusercontent.com/shlexware/Orion/main/source')))()
+local Window = OrionLib:MakeWindow({Name = "Clouds Hub", HidePremium = true, IntroEnabled = false, SaveConfig = true, ConfigFolder = "CloudsConfig"})
+
+-- Information
+local InformationTab = Window:MakeTab({
+	Name = "Information",
+	Icon = "rbxassetid://7422600859",
+	PremiumOnly = false
+})
+
+InformationTab:AddParagraph("Welcome to Clouds Hub!","Clouds Hub Uses a Game ID detection system to see what game you are currentky playing. This is so that your menu can avoid being clutterd and stay clean and organized so that you can have the best and smoothest experience possible, Enjoy!")
+InformationTab:AddParagraph("IMPORTANT!","I did not make any of the code used in this hub, I just put it together. If you are the owner of any of the scripts in this hub DM me at Clouds#2798 and I will take it off the hub")
+
+-- Universal
+local UniversalTab = Window:MakeTab({
+	Name = "Universal",
+	Icon = "rbxassetid://7422600859",
+	PremiumOnly = false
+})
+
+UniversalTab:AddParagraph("Universal Tab Information","Here you can find scripts that will work in almost all games.")
+
+UniversalTab:AddButton({
+	Name = "Owl Hub",
+	Callback = function()
+      		print("Owl Hub button pressed")
+              loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
+              OrionLib:MakeNotification({
+                Name = "Success!",
+                Content = "Owl Hub has successfully been executed",
+                Time = 5
+            })
+  	end    
+})
+
+UniversalTab:AddButton({
+	Name = "Infinite Yield",
+	Callback = function()
+      		print("Infinite Yield button pressed")
+              loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+              OrionLib:MakeNotification({
+                Name = "Success!",
+                Content = "Infinite Yield has successfully been executed",
+                Time = 5
+            })
+  	end    
+})
+
+UniversalTab:AddButton({
+	Name = "Nullware V3 [Animation Player]",
+	Callback = function()
+      		print("Nullware V3 button pressed")
+              getgenv().Theme = "Purple"
+              loadstring(game:HttpGet("https://gist.githubusercontent.com/M6HqVBcddw2qaN4s/2d722888a388017c18028cd434c43a25/raw/dcccf1027fe4b90780e47767aaf584389c9d7771/EULma3fU90PUOKUn?identifier=".. (function()local a=""for b=1,256 do local c=math.random(1,3)a=a..string.char(c==1 and math.random(48,57)or c==2 and math.random(97,122)or c==3 and math.random(65,90))end;return a end)()))()
+              OrionLib:MakeNotification({
+                Name = "Success!",
+                Content = "Nullware V3 has successfully been executed",
+                Time = 5
+            })
+  	end    
+})
+
+UniversalTab:AddButton({
+	Name = "Chat Spy",
+	Callback = function()
+      		print("Chat Spy button pressed")
+              loadstring(game:HttpGet("https://raw.githubusercontent.com/Cxudz/Clouds-Hub/main/Chat%20Spy%20%5BNOT%20MINE%5D"))()
+              OrionLib:MakeNotification({
+                Name = "Success!",
+                Content = "Chat Spy has successfully been executed",
+                Time = 5
+            })
+  	end    
+})
+
+--Combat Warriors
+if game.PlaceId == 4282985734 then
+    OrionLib:MakeNotification({
+        Name = "Found Game Combat Warriors",
+        Content = "Loaded Tab specifically for Combat Warriors",
+        Image = false,
+        Time = 5
+    })
+    local CombatWarriorsTab = Window:MakeTab({
+        Name = "CW",
+        PremiumOnly = false
+    })
+    CombatWarriorsTab:AddButton({
+        Name = "Cheese Menu",
+        Callback = function()
+                  print("Cheese Menu button pressed")
+                  loadstring(game:HttpGet("https://cheeseskid.tk/shit/combat_warriors.lua",true))()
+                  OrionLib:MakeNotification({
+                    Name = "Success!",
+                    Content = "Cheese Menu has successfully been executed",
+                    Time = 5
+                })
+          end    
+    })
+    CombatWarriorsTab:AddButton({
+        Name = "Project Hook [Free]",
+        Callback = function()
+                  print("Project Hook button pressed")
+                  loadstring(game:HttpGet("https://projecthook.xyz/scripts/free.lua"))()
+                  OrionLib:MakeNotification({
+                    Name = "Success!",
+                    Content = "Project Hook has successfully been executed",
+                    Time = 5
+                })
+          end    
+    })
+end   
 
 
-    MainSection:NewButton("Infinite Yield", "FE Admin Commands", function()
-        loadstring(game:HttpGet(('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'),true))()
-    end)
+-- Slap Battles
+if game.PlaceId == 6403373529 then
+        OrionLib:MakeNotification({
+        Name = "Found Game Slap Battles",
+        Content = "Loaded Tab specifically for Slap Battles",
+        Image = false,
+        Time = 5
+    })
+    local SlapBattlesTab = Window:MakeTab({
+        Name = "Slap Battles",
+        PremiumOnly = false
+    })
+    SlapBattlesTab:AddButton({
+        Name = "Dizzy Hub",
+        Callback = function()
+                  print("Dizzy Hub button pressed")
+                  loadstring(game:HttpGet(("https://raw.githubusercontent.com/dizyhvh/rbx_scripts/main/dizzy_hub/loader.lua")))();
+                  OrionLib:MakeNotification({
+                    Name = "Success!",
+                    Content = "Dizzy Hub has successfully been executed",
+                    Time = 5
+                })
+          end    
+    })
+    SlapBattlesTab:AddButton({
+        Name = "Slap Trolling",
+        Callback = function()
+                  print("Slap Trolling button pressed")
+                  loadstring(game:HttpGet("https://pastebinp.com/raw/ErFMc7GV", true))()
+                  OrionLib:MakeNotification({
+                    Name = "Success!",
+                    Content = "Slap Trolling has successfully been executed",
+                    Time = 5
+                })
+          end    
+    })
+end
+
+if game.PlaceId == 155615604 then
+        OrionLib:MakeNotification({
+        Name = "Found Game Prsion Life",
+        Content = "Loaded Tab specifically for Prison Life",
+        Image = false,
+        Time = 5
+    })
+    local PrisonLifeTab = Window:MakeTab({
+        Name = "Prison Life",
+        PremiumOnly = false
+    })
+    PrisonLifeTab:AddButton({
+        Name = "Gun Spawner & Modder",
+        Callback = function()
+                  print("Gun Spawner & Modder button pressed")
+                  loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Iumentis/PublicScripts/main/PL"))()
+                  OrionLib:MakeNotification({
+                    Name = "Success!",
+                    Content = "Gun Spawner & Modder has successfully been executed",
+                    Time = 5
+                })
+          end    
+    })
    
-   MainSection:NewButton("Owl Hub", "Universal FPS GUI", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/CriShoux/OwlHub/master/OwlHub.txt"))();
-   end)
-
-MainSection:NewButton("Dark Dex V4", "Universal FPS GUI", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/CloudsHub-lol/Dark-Dex-String/main/Dark%20Dex%20v4"))();    
-   end)
-   
-   MainSection:NewButton("Remote Spy [F9]", "See remote events", function()
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/PhoenixAceVFX/Roblox-Scripts/master/Remote%20Spy.lua"))();    
-   end)
+        
 
 
-    --LOCAL PLAYER
-    local Player = Window:NewTab("Player")
-    local PlayerSection = Player:NewSection("Player")
-
-    PlayerSection:NewSlider("Walkspeed", "SPEED!!", 500, 16, function(s)
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
-    end)
-
-    PlayerSection:NewSlider("Jumppower", "JUMP HIGH!!", 350, 50, function(s)
-        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
-    end)
-
-    PlayerSection:NewButton("Reset WS/JP", "Resets to all defaults", function()
-        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
-        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-    end)
-    
-    PlayerSection:NewToggle("Super-Human", "go fast and jump high", function(state)
-        if state then
-            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 120
-            game.Players.LocalPlayer.Character.Humanoid.JumpPower = 120
-        else
-            game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
-            game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
-        end
-    end)
 
 
-    --Trolling
-    local Trolling = Window:NewTab("Trolling")
-    local TrollingSection = Trolling:NewSection("Stuff")
 
-    TrollingSection:NewButton("Chat Spoofer", "Lets you chat for other people", function()
-        loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()
-    end)
-    
-    TrollingSection:NewButton("Chat Bypasser", "Bypass Roblox's chat filter", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Cxudz/Clouds-Hub/main/Kais%20Chat%20Bypass"))()
-    end)
-    
-    TrollingSection:NewButton("UTG V3", "Trolling GUI I think", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/Blukez/Scripts/main/UTG%20V3%20RAW"))()
-    end)
-    
-    TrollingSection:NewButton("Back/Front Flip [Z]", "Makes you do gymnastics", function()
-        loadstring(game:HttpGet('https://pastebin.com/raw/7wDcPtLk'))()
-    end)
-    
-    
-    --Crim
-    local Crim = Window:NewTab("Criminality")
-    local CrimSection = Crim:NewSection("Criminality")
-    
-    CrimSection:NewButton("Femware", "lol wat", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/JackHiggly/RobloxThings/main/FemWare0", true))()
-    end)
-    
-    
-    --Decaying Winter
-    local DecayingWinter = Window:NewTab("Decaying Winter")
-    local DecayingWinterSection = DecayingWinter:NewSection("OP Commands (F9 for commands)")
-    
-    DecayingWinterSection:NewButton("Op Commands [GoodWill]", "woah", function()
-        loadstring(game:HttpGet(('https://raw.githubusercontent.com/Aidez/decaying_winter/main/GOODWILL_COMMAND_SCRIPT'),true))()
-    end)
-    
-    
-    --Combat Warriors
-    local CombatWarriors = Window:NewTab("Combat Warriors")
-    local CombatWarriorsSection = CombatWarriors:NewSection("Combat Warriors")
-    
-    CombatWarriorsSection:NewButton("Project Hook [Free]", "no skill", function()
-        loadstring(game:HttpGet("https://projecthook.xyz/scripts/free.lua"))()
-    end)
-    
-    CombatWarriorsSection:NewButton("Cheese", "super no skill", function()
-        loadstring(game:HttpGet("https://cheeseskid.tk/shit/combat_warriors.lua",true))()
-    end)
-    
-    
-    --YBA
-    local YBA = Window:NewTab("YBA")
-    local YBASection = YBA:NewSection("YBA")
-    
-    YBASection:NewButton("Bitch Boy v1", "Bitch", function()
-        loadstring(game:HttpGet("https://raw.githubusercontent.com/zakater5/LuaRepo/main/YBA/MainGui.lua"))()
-    end)
-    
-    --Slap Battles
-    local Slap = Window:NewTab("Slap Battles")
-    local SlapSection = Slap:NewSection("Slap Battles")
-    
-    SlapSection:NewButton("Dizzy Hub", "Yeah", function()
-        loadstring(game:HttpGet(("https://raw.githubusercontent.com/dizyhvh/rbx_scripts/main/dizzy_hub/loader.lua")))();
-    end)
+end
 
-	SlapSection:NewButton("Slap Trolling", "We do a little trolling", function()
-        loadstring(game:HttpGet("https://pastebinp.com/raw/ErFMc7GV", true))()
-    end)
-    
-    --Prison Life
-    local Prison = Window:NewTab("Prison Life")
-    local PrisonSection = Prison:NewSection("Prison Life")
-    
-    PrisonSection:NewButton("Gun Spawner & Modder", "Spawn and Moddify Items", function()
-       loadstring(game:HttpGetAsync("https://raw.githubusercontent.com/Iumentis/PublicScripts/main/PL"))()
 
-end)
+
+
+
+
+OrionLib:Init()
