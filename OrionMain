@@ -78,7 +78,7 @@ UniversalTab:AddButton({
 if game.PlaceId == 4282985734 then
     OrionLib:MakeNotification({
         Name = "Found Game Combat Warriors",
-        Content = "Loaded Tab specifically for Combat Warriors",
+        Content = "Loaded tab specifically for Combat Warriors",
         Image = false,
         Time = 5
     })
@@ -117,7 +117,7 @@ end
 if game.PlaceId == 6403373529 then
         OrionLib:MakeNotification({
         Name = "Found Game Slap Battles",
-        Content = "Loaded Tab specifically for Slap Battles",
+        Content = "Loaded tab specifically for Slap Battles",
         Image = false,
         Time = 5
     })
@@ -154,7 +154,7 @@ end
 if game.PlaceId == 155615604 then
         OrionLib:MakeNotification({
         Name = "Found Game Prsion Life",
-        Content = "Loaded Tab specifically for Prison Life",
+        Content = "Loaded tab specifically for Prison Life",
         Image = false,
         Time = 5
     })
@@ -174,14 +174,39 @@ if game.PlaceId == 155615604 then
                 })
           end    
     })
-   
-        
-
-
-
-
-
 end
+
+if game.PlaceId == 6839171747 or 6516141723 then
+     OrionLib:MakeNotification({
+     Name = "Found Game DOORS 👁️",
+     Content = "Loaded tab specifically for DOORS 👁️",
+     Image = false,
+     Time = 5
+   })
+ local DOORSTab = Window:MakeTab({
+     Name = "DOORS 👁️",
+     PremiumOnly = false
+   })
+ DOORSTab:AddButton({
+    Name = "",
+    Callback = function()
+              print("Vynixuis - Doors")
+              loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Script.lua"))()
+              OrionLib:MakeNotification({
+                Name = "Success!",
+                Content = "Vynixuis - Doors has successfully been executed",
+                Time = 5
+            })
+      end    
+})
+end
+
+
+
+
+
+
+
 
 
 
