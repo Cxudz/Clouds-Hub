@@ -35,6 +35,23 @@ UniversalTab:AddButton({
 })
 
 UniversalTab:AddButton({
+	Name = "No Fog",
+	Callback = function()
+      		print("No Fog button pressed")
+              game.Lighting.FogEnd = 99999999999999999999999999999999999999999
+              game.Lighting.FogStart = 0
+              game.Lighting.ClockTime = 14
+              game.Lighting.Brightness = 2
+              game.Lighting.GlobalShadows = true
+              OrionLib:MakeNotification({
+                Name = "Success!",
+                Content = "No Fog has successfully been executed",
+                Time = 5
+            })
+  	end    
+})
+
+UniversalTab:AddButton({
 	Name = "Infinite Yield",
 	Callback = function()
       		print("Infinite Yield button pressed")
@@ -73,6 +90,7 @@ UniversalTab:AddButton({
             })
   	end    
 })
+
 
 --Combat Warriors
 if game.PlaceId == 4282985734 then
@@ -175,42 +193,6 @@ if game.PlaceId == 155615604 then
           end    
     })
 end
-
-if game.PlaceId == 6839171747 or 6516141723 then
-     OrionLib:MakeNotification({
-     Name = "Found Game DOORS 👁️",
-     Content = "Loaded tab specifically for DOORS 👁️",
-     Image = false,
-     Time = 5
-   })
- local DOORSTab = Window:MakeTab({
-     Name = "DOORS 👁️",
-     PremiumOnly = false
-   })
- DOORSTab:AddButton({
-    Name = "",
-    Callback = function()
-              print("Vynixuis - Doors")
-              loadstring(game:HttpGet("https://raw.githubusercontent.com/RegularVynixu/Vynixius/main/Doors/Script.lua"))()
-              OrionLib:MakeNotification({
-                Name = "Success!",
-                Content = "Vynixuis - Doors has successfully been executed",
-                Time = 5
-            })
-      end    
-})
-end
-
-
-
-
-
-
-
-
-
-
-
 
 
 OrionLib:Init()
