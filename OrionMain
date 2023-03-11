@@ -103,6 +103,31 @@ UniversalTab:AddButton({
             })
   	end    
 })
+--Criminality
+if game.PlaceId == 8343259840 then
+    OrionLib:MakeNotification({
+        Name = "Found Game Criminality",
+        Content = "Loaded tab specifically for Criminality",
+        Image = false,
+        Time = 5
+    })
+    local CriminalityTab = Window:MakeTab({
+        Name = "Criminality",
+        PremiumOnly = false
+    })
+    CriminalityTab:AddButton({
+        Name = "Femware",
+        Callback = function()
+                  print("Femware button pressed")
+                  loadstring(game:HttpGet("https://raw.githubusercontent.com/JackHiggly/RobloxThings/main/FemWare0", true))()
+                  OrionLib:MakeNotification({
+                    Name = "Success!",
+                    Content = "Femware has successfully been executed",
+                    Time = 5
+                })
+          end    
+    })
+end   
 
 --Da hood
 if game.PlaceId == 2788229376 then
