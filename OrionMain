@@ -153,6 +153,19 @@ if game.PlaceId == 2788229376 then
                 })
           end    
     })
+
+ DaHoodTab:AddButton({
+        Name = "Faded GUI",
+        Callback = function()
+                  print("Fadded button pressed")
+                  loadstring(game:HttpGet("https://raw.githubusercontent.com/NighterEpic/Faded/main/YesEpic", true))()
+                  OrionLib:MakeNotification({
+                    Name = "Success!",
+                    Content = "Faded Button has successfully been executed",
+                    Time = 5
+                })
+          end    
+    })
 end   
 
 --Combat Warriors
